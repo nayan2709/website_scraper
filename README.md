@@ -63,3 +63,20 @@ To remove keys from Redis, run the following command:
 ```bash
 redis-cli --scan --pattern "http*" | while read key; do redis-cli del "$key"; done
 ```
+
+Validating Entries
+------------------
+PostgreSQL:
+
+To validate entries in a PostgreSQL table, you can use psql commands or a SQL client like TablePlus. For example, to view all rows in a table, you can use:
+
+```sql
+SELECT * FROM product;
+```
+
+Redis:
+
+To validate entries in Redis using redis-cli, you can use commands to view data. For example, to get the value of a key:
+```redis
+redis-cli --scan --pattern "http*"
+```
