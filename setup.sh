@@ -69,6 +69,16 @@ export DATABASE_URL="postgresql+psycopg2://@localhost/${PG_DB}"
 echo "Installing Python packages..."
 pip install -r requirements.txt
 
+
+# Ensure alembic versions directory exists
+if [ ! -d "alembic/versions" ]; then
+    echo "Creating alembic versions directory..."
+    mkdir -p alembic/versions
+else
+    echo "Alembic versions directory already exists."
+fi
+
+
 # Run Alembic migrations
 echo "Running Alembic migrations..."
 alembic revision --autogenerate -m "Initial migration"
