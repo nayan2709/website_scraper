@@ -1,9 +1,0 @@
-{
-  "APP_HOST": "0.0.0.0",
-  "APP_PORT": 3000,
-  "BASE_URL": "https://dentalstall.com/shop",
-  "DB_URL": "postgresql+asyncpg://postgres:postgres@localhost:5432/scraper",
-  "REQUEST_RETRIES": 3,
-  "REDIS_HOST": "localhost:6379",
-  "AUTH_TOKEN": "Random123"
-}
